@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Username Generator</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>
+		window.jQuery || document.write('<script src="vendor/jquery-3.4.1.min.js"><\/script>');
+	</script>
+</head>
+<body>
+	<div class="cntr">
+		<h1>Username Generator</h1>
+		<p id="name">loading...</p>
+		<p>Press the space bar to generate another username</p>
+		<div class="filters">
+			<h2>Filters</h2>
+			<form id="adjective">
+				<input type="checkbox" id="adj-alliteration">
+				<label for="adj-alliteration">Use alliteration</label>
+			</form>
+			<form id="entity">
+				<h3>Entity type</h3>
+				<input type="radio" id="animal" value="animals" name="entity">
+				<label for="animal">Random animal</label>
+				<br>
+				<input type="radio" id="object" value="nouns" name="entity">
+				<label for="object">Random noun</label>
+				<small>Sample object: <span id="rand-obj">lamp</span></small>
+				<br>
+				<input type="radio" id="both" value="both" name="entity" checked>
+				<label for="both">Both</label>
+				<br>
+			</form>
+		</div>
+		<br>
+		<small>I assume no responsibility for the names generated.</small>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
