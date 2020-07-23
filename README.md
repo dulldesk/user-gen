@@ -1,2 +1,2 @@
-# alliter-gen
+# user-gen
 Generates usernames based on an adjective-[object | animal] pairing
