@@ -33,7 +33,7 @@ $(document).ready(async() => {
 async function genName() {
     let entity = await getEntity();
     let letter = prefs.alliteration ? entity[0] : false;
-	$("#name").text(`${await genWord('adjective',letter)} ${entity}`)
+	$("#name-block").text(`${await genWord('adjective',letter)} ${entity}`)
 }
 
 async function getEntity() {
