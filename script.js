@@ -56,3 +56,11 @@ async function genWord(type, letter=false) {
         else response.json().then(data => resolve(data[0]));
     });
 }
+
+setTimeout(() => {
+	if ($("#nameblock") == "loading...") $('#warn-refresh').show();
+}, 12000);
+
+setTimeout(() => {
+	if ($("#nameblock") == "loading...") $('#warn-load').show();
+}, 3000);

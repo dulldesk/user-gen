@@ -8,11 +8,18 @@
 	<script>
 		window.jQuery || document.write('<script src="/vendor/jquery-3.4.1.min.js"><\/script>');
 	</script>
+	<style>
+	.warn {
+		display:none;
+	}
+	</style>
 </head>
 <body>
 	<div class="cntr">
 		<h1>Username Generator</h1>
 		<p id="name-block">loading...</p>
+		<small id="warn-load" class="warn">As the API runs on a free heroku dyno, it may take a couple of seconds to wake up.</small>
+		<small id="warn-refresh" class="warn">Still loading? Try refreshing the page.</small>
 		<p>Press the space bar to generate another username</p>
 		<div class="filters">
 			<h2>Filters</h2>
