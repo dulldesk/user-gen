@@ -18,8 +18,8 @@
 	<div class="cntr">
 		<h1>Username Generator</h1>
 		<p id="name-block">loading...</p>
-		<small id="warn-load" class="warn">As the API runs on a free heroku dyno, it may take a couple of seconds to wake up.</small>
-		<small id="warn-refresh" class="warn">Still loading? Try refreshing the page.</small>
+		<p class="no-margin"><small id="warn-load" class="warn">As the API runs on a free heroku dyno, it may take a couple of seconds to wake up.</small></p>
+		<p class="no-margin"><small id="warn-refresh" class="warn">Still loading? Try refreshing the page.</small></p>
 		<p>Press the space bar to generate another username</p>
 		<div class="filters">
 			<h2>Filters</h2>
@@ -34,15 +34,14 @@
 				<br>
 				<input type="radio" id="object" value="nouns" name="entity">
 				<label for="object">Random noun</label>
-				<small>Sample object: <span id="rand-obj">lamp</span></small>
+				<span><small>Sample object: <span id="rand-obj">lamp</span></small></span>
 				<br>
 				<input type="radio" id="both" value="both" name="entity" checked>
 				<label for="both">Both</label>
 				<br>
 			</form>
 		</div>
-		<br>
-		<small>I assume no responsibility for the names generated.</small>
+		<p><small>I assume no responsibility for the names generated.</small></p>
 	</div>
 	<script src="script.js"></script>
 </body>

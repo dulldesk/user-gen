@@ -57,10 +57,11 @@ async function genWord(type, letter=false) {
     });
 }
 
-setTimeout(() => {
-	if ($("#nameblock") == "loading...") $('#warn-refresh').show();
-}, 12000);
+async function showWarn(id,sec) {
+	setTimeout(() => {
+		if ($("#name-block").text().trim() == "loading...") $(`#warn-${id}`).show();
+	}, sec*1000);
+}
 
-setTimeout(() => {
-	if ($("#nameblock") == "loading...") $('#warn-load').show();
-}, 3000);
+showWarn('refresh',12);
+showWarn('load',3);
