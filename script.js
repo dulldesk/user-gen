@@ -33,7 +33,8 @@ $(document).ready(async() => {
 async function genName() {
     let entity = await getEntity();
     let letter = prefs.alliteration ? entity[0] : false;
-	$("#name-block").text(`${await genWord('adjective',letter)} ${entity}`)
+    $("#name-block").text(`${await genWord('adjective',letter)} ${entity}`);
+    $('.warn').hide();
 }
 
 async function getEntity() {
@@ -59,9 +60,14 @@ async function genWord(type, letter=false) {
 
 async function showWarn(id,sec) {
 	setTimeout(() => {
-		if ($("#name-block").text().trim() == "loading...") $(`#warn-${id}`).show();
+		if ($("#name-block").text().trim() == "loading...") $(`#${id}`).show();
 	}, sec*1000);
 }
 
-showWarn('refresh',12);
-showWarn('load',3);
+function Warn(suff, delay) {
+  this.delay = delay;
+  this.id = `warn-${suff}`;
+  showWarn(this.id, this.delay);
+}
+
+[new Warn("load", 3), new Warn("refresh",12)];
