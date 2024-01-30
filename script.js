@@ -4,7 +4,7 @@ const prefs = {
 	"nouns": true
 }
 
-const apiUrl = 'https://random-word-form.repl.co/random';
+const apiUrl = 'https://random-word-form.herokuapp.com/random';
 
 $(document).ready(async() => {
 	$(".filters form").change(function() {
